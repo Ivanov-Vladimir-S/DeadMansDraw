@@ -1,0 +1,137 @@
+import React, { Component } from "react";
+
+class Card extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imgBase: {
+        id1:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/1.png?raw=true",
+        id2:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/2.png?raw=true",
+        id3:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/3.png?raw=true",
+        id4:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/4.png?raw=true",
+        id5:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/5.png?raw=true",
+        id6:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Anchor/6.png?raw=true",
+        id7:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/1.png?raw=true",
+        id8:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/2.png?raw=true",
+        id9:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/3.png?raw=true",
+        id10:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/4.png?raw=true",
+        id11:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/5.png?raw=true",
+        id12:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Key/6.png?raw=true",
+        id13:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/1.png?raw=true",
+        id14:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/2.png?raw=true",
+        id15:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/3.png?raw=true",
+        id16:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/4.png?raw=true",
+        id17:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/5.png?raw=true",
+        id18:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kraken/6.png?raw=true",
+        id19:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/1.png?raw=true",
+        id20:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/2.png?raw=true",
+        id21:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/3.png?raw=true",
+        id22:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/4.png?raw=true",
+        id23:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/5.png?raw=true",
+        id24:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Kruk/6.png?raw=true",
+        id25:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/1.png?raw=true",
+        id26:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/2.png?raw=true",
+        id27:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/3.png?raw=true",
+        id28:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/4.png?raw=true",
+        id29:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/5.png?raw=true",
+        id30:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Map/6.png?raw=true",
+        id31:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/1.png?raw=true",
+        id32:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/2.png?raw=true",
+        id33:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/3.png?raw=true",
+        id34:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/4.png?raw=true",
+        id35:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/5.png?raw=true",
+        id36:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Pushka/6.png?raw=true",
+        id37:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Rusalka/5.png?raw=true",
+        id38:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Rusalka/6.png?raw=true",
+        id39:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Rusalka/7.png?raw=true",
+        id40:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Rusalka/8.png?raw=true",
+        id41:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Rusalka/9.png?raw=true",
+        id42:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/1.png?raw=true",
+        id43:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/2.png?raw=true",
+        id44:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/3.png?raw=true",
+        id45:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/4.png?raw=true",
+        id46:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/5.png?raw=true",
+        id47:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Shar/6.png?raw=true",
+        id48:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/1.png?raw=true",
+        id49:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/2.png?raw=true",
+        id50:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/3.png?raw=true",
+        id51:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/4.png?raw=true",
+        id52:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/5.png?raw=true",
+        id53:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sunduk/6.png?raw=true",
+        id54:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/1.png?raw=true",
+        id55:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/2.png?raw=true",
+        id56:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/3.png?raw=true",
+        id57:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/4.png?raw=true",
+        id58:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/5.png?raw=true",
+        id59:
+          "https://github.com/copypastepirates/treasuresisland/blob/master/img/Cards/Cards/Sword/6.png?raw=true"
+      }
+    };
+  }
+  render() {
+    let cardImg = this.props.cImg;
+    return (
+      <img alt="карта" className="card" src={this.state.imgBase[cardImg]} />
+    );
+  }
+}
+
+export default Card;

@@ -1,0 +1,233 @@
+.main-grid {
+  display: none;
+}
+
+@media (min-width: 800px) and (min-height: 300px) {
+  .body {
+    font-family: "Times New Roman", sans-serif;
+    margin: 0;
+  }
+
+  .win {
+    width: 330px;
+    height: 120px;
+    text-shadow: 0 0 20px #ffd35b;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .main-grid {
+    display: grid;
+    background-image: url("https://raw.githubusercontent.com/copypastepirates/treasuresisland/master/img/Background.png");
+    grid-template-rows: minmax(200px, auto) 400px minmax(200px, auto);
+    grid-template-areas:
+      "player1"
+      "table"
+      "player2";
+  }
+
+  .player1 {
+    display: grid;
+    grid-area: player1;
+    grid-template-columns: 640px 1fr 250px;
+    grid-template-areas: "player1-points player1-info player1-avatar";
+  }
+
+  .player2 {
+    display: grid;
+    grid-area: player2;
+    grid-template-columns: 250px 1fr 640px;
+    grid-template-areas: "player2-avatar player2-info player2-points";
+  }
+
+  .player1 .points {
+    display: grid;
+    grid-area: player1-points;
+    grid-template: 1fr/1fr;
+    align-items: start;
+    justify-items: left;
+    background: url("https://raw.githubusercontent.com/copypastepirates/treasuresisland/master/img/Coins_Top.png")
+      left top/570px no-repeat;
+  }
+
+  .player1 .points .counter {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 90px 0 0 50px;
+  }
+
+  .points .counter {
+    width: 72px;
+    height: 86px;
+    font-size: 80px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 3px 3px 0 black, -3px -3px 0 black;
+    font-family: "Times New Roman", sans-serif;
+  }
+
+  .player1 .info {
+    grid-area: player1-info;
+    display: grid;
+    justify-items: right;
+  }
+
+  .info > div {
+    height: 95px;
+    margin-top: 40px;
+    opacity: 0.75;
+    font-weight: bold;
+  }
+
+  .info .name {
+    margin: 0;
+    font-size: 30px;
+    color: #daa000;
+  }
+
+  .info .active {
+    margin-top: 10px;
+    font-size: 26px;
+    color: #fff;
+  }
+
+  .player1 .avatar {
+    grid-area: player1-avatar;
+    display: grid;
+    grid-template: 1fr/1fr;
+    align-items: start;
+    justify-items: right;
+  }
+
+  .player1 .avatar * {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .reset {
+    width: 96px;
+    transform: scale(-1, 1);
+    height: 98px;
+    opacity: 0.7;
+    grid-area: player1-info;
+    display: grid;
+    grid-template: 1fr/1fr;
+    align-items: start;
+    justify-items: left;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  .player1 .avatar img {
+    width: 235px;
+    height: 196px;
+  }
+
+  .player2 .points {
+    display: grid;
+    grid-area: player2-points;
+    grid-template: 1fr/1fr;
+    justify-items: right;
+    align-items: end;
+    background: url("https://raw.githubusercontent.com/copypastepirates/treasuresisland/master/img/Coins_bottom.png")
+      right bottom/650px no-repeat;
+  }
+
+  .player2 .points .counter {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    margin: 0 49px 90px 0;
+  }
+
+  .player2 .info {
+    grid-area: player2-info;
+  }
+
+  .player2 .avatar {
+    grid-area: player2-avatar;
+  }
+
+  .player2 .avatar img {
+    width: 235px;
+    height: 196px;
+  }
+
+  .table {
+    grid-area: table;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-areas: "deck cards";
+    background-color: rgba(0, 0, 0, 0.5);
+    border-top: 2px solid #ceb067;
+    border-bottom: 2px solid #ceb067;
+  }
+
+  .deck {
+    grid-area: deck;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .deck .card {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+
+  img.card {
+    margin: 0 5px 0 0;
+    height: 338px;
+    width: 246px;
+  }
+
+  .deck .counter {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    opacity: 0.75;
+    font-size: 60px;
+    font-weight: bold;
+    color: #daa000;
+    font-family: "Times New Roman", sans-serif;
+  }
+
+  .cards {
+    grid-area: cards;
+    display: grid;
+    padding: 0 150px 0 10px;
+    grid-template: 1fr / repeat(auto-fit, minmax(30px, auto));
+    align-items: center;
+    justify-items: left;
+  }
+
+  .bust {
+    width: 10000px;
+    text-shadow: 0 0 20px rgb(185, 52, 52);
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(185, 52, 52);
+  }
+
+  .kraken {
+    width: 10000px;
+    text-shadow: 0 0 20px rgb(34, 121, 34);
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(34, 121, 34);
+  }
+  .anchor {
+    width: 10000px;
+    text-shadow: 0 0 20px rgb(85, 85, 219);
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(85, 85, 219);
+  }
+  .shar {
+    width: 10000px;
+    text-shadow: 0 0 20px palevioletred;
+    font-size: 30px;
+    font-weight: bold;
+    color: palevioletred;
+  }
+}

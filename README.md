@@ -1,2 +1,0 @@
-# DeadMansDraw
-Created with CodeSandbox
